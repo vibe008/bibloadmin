@@ -30,7 +30,7 @@ export default function CustumizeStory() {
 
     const [editable, setEditable] = useState(false)
 
-    const [voice, setVoicefile] = useState()
+    // const [voice, setVoicefile] = useState()
 
     const [deleteAudio, setDeleteAudio] = useState(false)
     const params = useParams()
