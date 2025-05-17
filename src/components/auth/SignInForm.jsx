@@ -1,5 +1,4 @@
 "use client";
-import Checkbox from "@/components/form/input/Checkbox";
 import Input from "@/components/form/input/InputField";
 import Label from "@/components/form/Label";
 import Button from "@/components/ui/button/Button";
@@ -22,7 +21,7 @@ export default function SignInForm() {
     email: '',
     passward: '',
   })
-  const handleChange = (e: any) => {
+  const handleChange = (e) => {
     setFormdata({ ...formdata, [e.target.name]: e.target.value })
   }
 
@@ -41,7 +40,7 @@ export default function SignInForm() {
     checkLogin();
   }, []);
   console.log("message",message)
-  const HandleSubmit = async (e: any) => {
+  const HandleSubmit = async (e) => {
     e.preventDefault();
     setIsOpen(true);
     try {

@@ -27,11 +27,11 @@ export default function SignUpForm() {
     passward: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = () => {
     setForm({ ...formdata, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async () => {
     e.preventDefault();
     setIsOpen(true)
     try {
