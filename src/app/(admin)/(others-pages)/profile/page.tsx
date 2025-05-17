@@ -1,8 +1,5 @@
 "use client"
-import UserAddressCard from "@/components/user-profile/UserAddressCard";
-import UserInfoCard from "@/components/user-profile/UserInfoCard";
 import UserMetaCard from "@/components/user-profile/UserMetaCard";
-import { Metadata } from "next";
 import React, { useEffect, useState } from "react";
 import BasicTableOne from '@/components/tables/BasicTableOne';
 import { GetUserStorys } from "@/Services/post";

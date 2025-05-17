@@ -3,12 +3,11 @@ import Checkbox from "@/components/form/input/Checkbox";
 import Input from "@/components/form/input/InputField";
 import Label from "@/components/form/Label";
 import Button from "@/components/ui/button/Button";
-import { ChevronLeftIcon, EyeCloseIcon, EyeIcon } from "@/icons";
+import {  EyeCloseIcon, EyeIcon } from "@/icons";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { fetchLoggedInUser, loginUser } from "@/Services/authService";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Alert from "../ui/alert/Alert";
 import Loading from "../ui/loader/Loading"
 import { useRouter } from 'next/navigation';
 
@@ -41,7 +40,7 @@ export default function SignInForm() {
     };
     checkLogin();
   }, []);
-  
+  console.log("message",message)
   const HandleSubmit = async (e: any) => {
     e.preventDefault();
     setIsOpen(true);
@@ -63,6 +62,7 @@ export default function SignInForm() {
     } catch (error) {
       setMessage("Error in SignIn");
       toast.error("Error in SignIn");
+      console.log(error)
     } finally {
       setIsOpen(false); // Always hide loader after attempt
     }
@@ -206,7 +206,9 @@ export default function SignInForm() {
                   </Link>
                 </div>
                 <div>
-                  <Button disabled={modalIsOpen || isChecked} onClick={HandleSubmit} className="w-full" size="sm">
+                  <Button disabled={modalIsOpen || isChecked} onClick={()=>{
+                    HandleSubmit
+                  }} className="w-full" size="sm">
                     Sign in
                   </Button>
                 </div>

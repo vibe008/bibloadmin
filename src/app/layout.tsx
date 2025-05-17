@@ -9,7 +9,6 @@ import {fetchLoggedInUser} from "../Services/authService"
 const outfit = Outfit({
   subsets: ["latin"],
 });
-import { useRouter } from 'next/navigation';
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,7 +16,6 @@ export default function RootLayout({
 }>) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] =useState(false)
-  const router = useRouter();
 
   useEffect(() => {
     const userRole = localStorage.getItem('superadmin');
@@ -40,6 +38,7 @@ export default function RootLayout({
     };
     checkUser();
   }, [user]);
+  console.log("loading",loading)
   return (
     <html lang="en">
       <body className={`${outfit.className} dark:bg-gray-900`}>

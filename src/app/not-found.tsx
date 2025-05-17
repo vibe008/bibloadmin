@@ -12,8 +12,6 @@ export default function NotFound() {
 
   useEffect(() => {
     const handleBack = () => {
-      const isSuperAdmin = localStorage.getItem("superadmin");
-      const isAdmin = localStorage.getItem("admin");
       router.replace("/dashboard")
       // if (isSuperAdmin) {
       //   router.replace("/superadmin/dashboard");

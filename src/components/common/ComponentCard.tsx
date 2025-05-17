@@ -1,10 +1,8 @@
 import React from "react";
-import Button from "../ui/button/Button";
 interface ComponentCardProps {
   title: string;
   children: React.ReactNode;
   className?: string; // Additional custom classes for styling
-  editbtn?: Boolean;
   // setEditable?:React.SetStateAction(true);
 }
 
@@ -12,7 +10,7 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
   title,
   children,
   className = "",
-  editbtn,
+  
   // setEditable
 }) => {
   return (
