@@ -3,7 +3,7 @@ import CheckboxComponents from "@/components/form/form-elements/CheckboxComponen
 import DefaultInputs from "@/components/form/form-elements/DefaultInputs";
 import FileInputExample from "@/components/form/form-elements/FileInputExample";
 import InputGroup from "@/components/form/form-elements/InputGroup";
-import InputStates from "@/components/form/form-elements/InputStates";
+// import InputStates from "@/components/form/form-elements/InputStates";
 import RadioButtons from "@/components/form/form-elements/RadioButtons";
 // import SelectInputs from "@/components/form/form-elements/SelectInputs";
 import TextAreaInput from "@/components/form/form-elements/TextAreaInput";
@@ -26,7 +26,7 @@ export default function FormElements() {
           <DefaultInputs />
           {/* <SelectInputs /> */}
           <TextAreaInput />
-          <InputStates />
+          {/* <InputStates /> */}
         </div>
         <div className="space-y-6">
           <InputGroup />
